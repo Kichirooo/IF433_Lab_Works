@@ -1,9 +1,9 @@
 package oop_00000110585_AndrewReynardHamdani.week01
 
 fun main() {
-    var name = "John Thor"
-    var score = 80
+    var name: String = "John Thor"
+    var score: Int = 80
 
-    println("Nama: $name, Nilai: $score")
+    println("Nama: " + name + ", Nilai: " + score)
 }
 
