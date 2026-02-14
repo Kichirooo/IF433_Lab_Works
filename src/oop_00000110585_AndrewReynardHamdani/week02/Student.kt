@@ -1,10 +1,10 @@
 package oop_00000110585_AndrewReynardHamdani.week02
 
 class Student (
-    val name: String
-    val nim: String
-    val gpa: Double = 0.0
-    var major: String
+    val name: String,
+    val nim: String,
+    val gpa: Double = 0.0,
+    var major: String,
 ) {
     init {
         if (nim.length != 5) {
