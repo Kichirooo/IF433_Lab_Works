@@ -1,10 +1,14 @@
 package oop_00000110585_AndrewReynardHamdani.week03
 
 class Employee (val name: String) {
-    val salary: Int = 0
-        set(value) {
-            println("Mencoba set gaji ke: $value")
-            this.salary = value
+    var salary: Int = 0
+        set (value) {
+            if(value < 0) {
+                println("ERROR: Gaji tidak boleh negatif! Di-set ke 0.")
+                field = 0
+            } else {
+                field = value
+            }
         }
 }
 
