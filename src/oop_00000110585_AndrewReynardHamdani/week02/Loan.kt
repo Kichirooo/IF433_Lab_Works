@@ -23,7 +23,7 @@ fun printReceipt(title: String, finalPrice: Int, userNote: String? = null) {
 
 fun main() {
     val gameTitle = "Mario Bros"
-    val price = 550000
+    val price = 550010
     val note: String? = null
 
     printReceipt(
