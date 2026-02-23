@@ -20,7 +20,7 @@ class Employee(val name: String) {
         performanceRating++
         println("Kinerja $name meningkat! Rating: $performanceRating")
     }
-
+    //
     fun printStatus() {
         println("Karyawan: $name, Rating: $performanceRating")
     }
