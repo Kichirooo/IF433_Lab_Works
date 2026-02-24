@@ -1,13 +1,14 @@
 package oop_00000110585_AndrewReynardHamdani.week03
 
 fun main() {
-    val e = Employee("Budi")
+    val myWeapon = Weapon("Excalibur", 100)
+    println("Senjata: ${myWeapon.name} | Damage Awal: ${myWeapon.damage}")
 
-    e.salary = -1000
-    e.salary = 5000000
-    println("Gaji: ${e.salary}")
+    myWeapon.damage = -50
+    println("Damage sekarang: ${myWeapon.damage}")
 
-    e.increasePerformance()
+    myWeapon.damage = 9999
+    println("Damage setelah paksa: ${myWeapon.damage}")
 
-    println("Pajak yang harus dibayar: Rp${e.tax}")
+    println("Tier Senjata: ${myWeapon.tier}")
 }
