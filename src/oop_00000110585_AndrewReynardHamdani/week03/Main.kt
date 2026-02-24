@@ -7,7 +7,7 @@ fun main() {
     myWeapon.damage = -50
     println("Damage sekarang: ${myWeapon.damage}")
 
-    myWeapon.damage = 9999
+    myWeapon.damage = 9998
     println("Damage setelah paksa: ${myWeapon.damage}")
 
     println("Tier Senjata: ${myWeapon.tier}")
