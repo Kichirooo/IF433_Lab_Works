@@ -1,25 +1,16 @@
 package oop_00000110585_AndrewReynardHamdani.week05
 
 fun main() {
-    val dosen1 = Dosen("Pak Alex", "0123456")
-    val admin1 = Admin("Bu Siti")
+    val helper = MathHelper()
 
-    val daftarPegawai: List<Pegawai> = listOf(dosen1, admin1)
+    println("--- Testing MathHelper Overloading ---")
 
-    println("=== AKTIVITAS PEGAWAI ===")
-    for (pegawai in daftarPegawai) {
-        pegawai.bekerja()
-    }
+    val luasPersegi = helper.hitungLuas(5)
+    println("Luas Persegi (sisi 5): $luasPersegi")
 
-    when (Pegawai) {
-        is Dosen -> {
-            println("=> Terdeteksi sebagai Dosen (NIDN: ${Pegawai.nidn})")
-            Pegawai.mengajar()
-        }
-        is Admin -> {
-            println("=> Terdeteksi sebagai Admin")
-            Pegawai.doAdminWork()
-        }
-    }
-    println("------------------------------")
+    val luasPersegiPanjang = helper.hitungLuas(10, 5)
+    println("Luas Persegi Panjang (10x5): $luasPersegiPanjang")
+
+    val luasLingkaran = helper.hitungLuas(7.0)
+    println("Luas Lingkaran (jari-jari 7.0): $luasLingkaran")
 }
