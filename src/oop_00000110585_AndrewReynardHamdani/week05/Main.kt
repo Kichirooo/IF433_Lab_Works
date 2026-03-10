@@ -1,16 +1,15 @@
 package oop_00000110585_AndrewReynardHamdani.week05
 
 fun main() {
-    val helper = MathHelper()
+    val myEWallet = EWallet("Andrew", 50000.0)
+    val myCreditCard = CreditCard("Andrew", 100000.0)
 
-    println("--- Testing MathHelper Overloading ---")
+    val paymentList: List<PaymentMethod> = listOf(myEWallet, myCreditCard)
 
-    val luasPersegi = helper.hitungLuas(5)
-    println("Luas Persegi (sisi 5): $luasPersegi")
+    println("--- Simulasi Pembayaran E-Commerce ---")
 
-    val luasPersegiPanjang = helper.hitungLuas(10, 5)
-    println("Luas Persegi Panjang (10x5): $luasPersegiPanjang")
-
-    val luasLingkaran = helper.hitungLuas(7.0)
-    println("Luas Lingkaran (jari-jari 7.0): $luasLingkaran")
+    for (method in paymentList) {
+        method.processPayment(75000.0)
+        println("-----------------------------------")
+    }
 }
