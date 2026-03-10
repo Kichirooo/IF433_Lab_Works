@@ -10,6 +10,13 @@ fun main() {
 
     for (method in paymentList) {
         method.processPayment(75000.0)
+
+        if (method is EWallet) {
+            println("[Smart Casting] Mendeteksi EWallet, melakukan recovery...")
+            method.topUp(50000.0)
+            method.processPayment(75000.0)
+        }
+
         println("-----------------------------------")
     }
 }
