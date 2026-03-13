@@ -1,21 +1,19 @@
 package oop_00000110585_AndrewReynardHamdani.week06
 
-fun processCheckout(method: PaymentMethod, amount: Double) {
-    println("-> Memulai checkout...")
-    method.pay(amount)
-}
-
 fun main() {
-    val myWatch = Smartwatch()
-    myWatch.showTime()
+    val hub = SmartHomeHub()
 
-    val myPhone = Smartphone()
-    myPhone.turnOn()
+    val lamp = SmartLamp("L01", "Ruang Tamu")
+    val speaker = SmartSpeaker("S01", "Google Nest Dapur")
+    val cctv = SmartCCTV("C01", "Ezviz Garasi")
 
-    val pay1 = Gopay()
-    val pay2 = CreditCard()
+    hub.addDevice(lamp)
+    hub.addDevice(speaker)
+    hub.addDevice(cctv)
 
-    println("\n=== TESTING CHECKOUT ===")
-    processCheckout(pay1, 50000.0)
-    processCheckout(pay2, 150000.0)
+    println("--- Menjalankan Sistem Smart Home ---")
+    hub.activateSecurityMode()
+
+    println("\n--- Mematikan Seluruh Saklar ---")
+    hub.turnOffAllSwitches()
 }
