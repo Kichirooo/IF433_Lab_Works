@@ -47,5 +47,13 @@ fun main() {
     println("- Kelangkaan: ${starterWeapon.item.rarity}")
     println("- Durability: ${starterWeapon.durability}")
 
+    val starterWeapon = Weapon.forgeStarterSword()
+    val upgradedItem = starterWeapon.item.copy(damage = 25)
+    println("Berhasil upgrade di Blacksmith! Senjata baru: ${upgradedItem.name} dengan damage ${upgradedItem.damage}")
 
+    println("\n--- SIMULASI PETUALANGAN DIMULAI ---")
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(upgradedItem))
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
