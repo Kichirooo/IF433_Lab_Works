@@ -36,9 +36,6 @@ fun main() {
     }
 
     println("\n=== SIMULASI GAME RPG ===")
-// Panggilan pertama: Seharusnya mencetak "Memulai Game Engine..."
     GameManager.startGame()
-
-// Panggilan kedua: Seharusnya mencetak "Game sudah berjalan! Mencegah instansiasi ganda."
     GameManager.startGame()
 }
