@@ -26,7 +26,7 @@ fun main() {
 
     val (username, userAge) = data1
     println("Destructed: $userName berumur $userAge")
-
+//
     println("\n=== TEST SEALED CLASS ===")
     val response: ApiResponse = ApiResponse.Success("Data berhasil ditarik!")
 
