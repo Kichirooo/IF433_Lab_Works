@@ -34,4 +34,11 @@ fun main() {
         is ApiResponse.Success -> "Tampilkan: ${response.data}"
         is ApiResponse.Error -> "Munculkan alert: ${response.message}"
     }
+
+    println("\n=== SIMULASI GAME RPG ===")
+// Panggilan pertama: Seharusnya mencetak "Memulai Game Engine..."
+    GameManager.startGame()
+
+// Panggilan kedua: Seharusnya mencetak "Game sudah berjalan! Mencegah instansiasi ganda."
+    GameManager.startGame()
 }
