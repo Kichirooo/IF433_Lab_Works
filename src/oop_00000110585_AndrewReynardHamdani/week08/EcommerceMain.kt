@@ -26,4 +26,4 @@ fun main() {
             println("Peringatan Data Korup: ${e.message}")
         }
     }
-}
+} //
