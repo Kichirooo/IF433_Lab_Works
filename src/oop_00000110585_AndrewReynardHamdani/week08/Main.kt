@@ -43,5 +43,5 @@ fun main() {
         val length = toxicData!!.length
     } catch (e: NullPointerException) {
         println("CRASH (NPE)! Jangan gunakan !! secara sembarangan.")
-    }
+    } ////
 }
