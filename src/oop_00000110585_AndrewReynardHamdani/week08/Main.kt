@@ -8,7 +8,7 @@ fun main() {
     println("Tujuan pengiriman: $destination")
 
     println("\n=== TEST LET BLOCK ===")
-    val validOrdere = Order(null,250000)
+    val validOrder = Order(null,250000)
 
     val receipt = validOrder.totalPrice?.let { price ->
         val tax = price * 0.11
@@ -18,7 +18,7 @@ fun main() {
     println(receipt)
 
     println("\n=== TEST SAFE CASTING===")
-    val mixedData: List<Any> = listPf(
+    val mixedData: List<Any> = listOf(
         "Smartphone",
         1500000,
         UserProfile("Andi", null),
@@ -32,4 +32,8 @@ fun main() {
             println("Ditemukan teks: ${it.uppercase()}")
         }
     }
+
+    val someObject: Any = 100
+    val safeString = someObject as? String?: "Unknown String"
+    println("Hasil cast + fallback: $safeString")
 }
