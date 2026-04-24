@@ -31,6 +31,6 @@ fun main() {
 
     val inventory = mutableMapOf("Apples" to 50, "Banana" to 30)
     inventory["Oranges"] = 20
-    inventory["Apples"] = 45
+    inventory["Apples"] = 45 //
     println("Inventory: $inventory")
 }
