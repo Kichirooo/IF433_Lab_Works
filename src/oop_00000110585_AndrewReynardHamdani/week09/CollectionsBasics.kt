@@ -18,5 +18,5 @@ fun main() {
     val activeUsers = mutableSetOf("User A", "User B")
     activeUsers.add("UserC")
     activeUsers.add("UserA")
-    println("Mutable List: $scores")
+    println("Active Users: $activeUsers")
 }
