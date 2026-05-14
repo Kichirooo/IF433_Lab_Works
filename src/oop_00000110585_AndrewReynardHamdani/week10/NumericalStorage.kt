@@ -1,11 +1,11 @@
-package oop_00000110585_AndrewReynardHamdani.week10
+package oop_001_johnthor.week10
 
 class MathBox<T : Number>(val value1: T, val value2: T) {
     fun sum(): Double {
         return value1.toDouble() + value2.toDouble()
     }
+}
 
     fun <T : Comparable<T>> getMax(a: T, b: T): T {
         return if (a > b) a else b
-    }
 }

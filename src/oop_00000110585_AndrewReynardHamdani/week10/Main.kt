@@ -15,5 +15,10 @@ fun main() {
     println("\n=== TEST GENERIC FUNCTIONS ===")
     printData(3.14)
     val result = processData("Stable Coin")
-    println("Hasil proses: $result") //
+    println("Hasil proses: $result")
+
+    println("\n=== TEST CONSTRAINTS ===")
+    val math = MathBox(10.5, 20)
+    println("Total: ${math.sum()}")
+    println("Terbesar: ${math.getMax(45, 90)}")
 }
