@@ -35,4 +35,5 @@ fun main() {
     with(homeDevices) {
         println("Jumlah perangkat: ${this.size}")
     }
+    //
 }
