@@ -52,13 +52,15 @@ fun main() {
         TradeRecord(1, "BTCUSDT", "Long", 100.0, 25.5),
         TradeRecord(2, "ETHUSDT", "Short", 50.0, -10.0)
     )
-
     saveTrades(mockTrades, "crypto_trades.csv")
 
     File("crypto_trades.csv").appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
-
     val loadedData = loadTrades("crypto_trades.csv")
-    val totalPnl = loadedData.sumOf { it.pnl }
 
-    println("Total PnL: $totalPnl")
+    loadedData.forEach { trade ->
+        println(trade)
+    }
+
+    val totalPnl = loadedData.sumOf { it.pnl }
+    println("==== TOTAL PnL BERSIH: $totalPnl ====")
 }
