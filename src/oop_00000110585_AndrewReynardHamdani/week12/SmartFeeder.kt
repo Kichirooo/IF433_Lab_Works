@@ -18,10 +18,10 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
 fun main() {
     var currentKibbleStock = 50
 
+    currentKibbleStock = dispenseKibble(
+        requestedGram = 80,
+        availableGram = currentKibbleStock,
     try {
-        currentKibbleStock = dispenseKibble(
-            requestedGram = 80,
-            availableGram = currentKibbleStock,
             isJammed = false
         )
     } catch (e: DispenserJamException) {
