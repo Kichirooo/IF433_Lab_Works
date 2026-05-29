@@ -14,4 +14,6 @@ class UserManager {
     fun sendWelcomeEmail(user: User) {
         println("Sending email to: ${user.email}")
     }
+
+    // Checkpoint 2
 }
